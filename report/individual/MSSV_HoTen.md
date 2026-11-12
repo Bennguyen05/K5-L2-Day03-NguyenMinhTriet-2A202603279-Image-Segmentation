@@ -54,6 +54,6 @@ Mỗi ca là một **vùng cụ thể** khiến bạn phải cân nhắc hai cá
 
 | Ảnh/vị trí | Hai cách hiểu có thể | Quy tắc/chứng cứ | Quyết định hoặc câu hỏi cho coach |
 | --- | --- | --- | --- |
-| 2/ medium_instance | Có 2 người cùng đi trước chiếc xe taxi ở giữa ảnh, nhưng người đằng trước đã che khuất hầu hết người sau |  | … |
-| 2 | … | … | … |
-| 3 | … | … | … |
+| 1/ hard_panoptic / các xe ở cuối con đường|hai xe liền nhau là hai instance hay một |vẫn thấy một phần mui xe và màu sắc khác nhau  | Hỏi Coach có cần thiết phải vẽ toàn bộ xe ở sau không, hay chỉ vẽ những xe chắc chắn thấy. |
+| 2/ cp1_holes, xe máy ở giữa 2 xe hơi |khe nhìn xuyên ra nền giữ trong mask xe máy hay khoét ra; giá đỡ tính là một phần xe máy hay không  | Kính/khe nằm trong mask vật, không khoét tùy tiện | vẽ mask thuộc xe máy, tính giá đỡ là một phần xe máy |
+| 3/ cp5_occlution/ ở bên trái ảnh có xe máy nằm giữa 2 chiếc xe hơi | có tính xe máy là một instance hay không | các bộ phận thấy được của vật thể vẫn có thể xác định được là class motorcycle | vẽ mask phần xe máy đã xác định |
